@@ -1,13 +1,30 @@
 fetch('studentData.json')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
+    .then(response => response.json())
     .then(data => {
         const studentData = data;
-      document.addEventListener('DOMContentLoaded', function() {
+        // Rest of the JavaScript code remains the sa
+
+        "101": {
+            "name": "John Doe",
+            "subject": "Math",
+            "marks": 95,
+            "remarks": "Excellent"
+        },
+        "102": {
+            "name": "Jane Smith",
+            "subject": "Science",
+            "marks": 88,
+            "remarks": "Very Good"
+        },
+        "103": {
+            "name": "Alice Johnson",
+            "subject": "History",
+            "marks": 75,
+            "remarks": "Good"
+        }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
     const searchForm = document.getElementById('search-form');
     const rollNumberInput = document.getElementById('roll-number');
     const searchButton = document.getElementById('search-button');
@@ -31,8 +48,3 @@ fetch('studentData.json')
         }
     });
 });
-    })
-    .catch(error => {
-        console.error('Error fetching JSON data:', error);
-    });
-
