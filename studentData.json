@@ -16,5 +16,6 @@
         "subject": "History",
         "marks": 75,
         "remarks": "Good"
-    }
+    },
+    // ... Add data for the remaining 47 students
 }
