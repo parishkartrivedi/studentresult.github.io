@@ -1,3 +1,24 @@
+const studentData = {
+    "101": {
+        "name": "John Doe",
+        "subject": "Math",
+        "marks": 95,
+        "remarks": "Excellent"
+    },
+    "102": {
+        "name": "Jane Smith",
+        "subject": "Science",
+        "marks": 88,
+        "remarks": "Very Good"
+    },
+    "103": {
+        "name": "Alice Johnson",
+        "subject": "History",
+        "marks": 75,
+        "remarks": "Good"
+    }
+};
+
 document.addEventListener('DOMContentLoaded', function() {
     const searchForm = document.getElementById('search-form');
     const rollNumberInput = document.getElementById('roll-number');
@@ -10,21 +31,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     searchButton.addEventListener('click', function() {
         const rollNumber = rollNumberInput.value;
-
-        // Fetch student data from an external JSON file
-        fetch('studentData.json')
-            .then(response => response.json())
-            .then(data => {
-                if (data[rollNumber]) {
-                    const student = data[rollNumber];
-                    studentName.textContent = student.name;
-                    studentSubject.textContent = student.subject;
-                    studentMarks.textContent = student.marks;
-                    studentRemarks.textContent = student.remarks;
-                    resultContainer.style.display = 'block';
-                } else {
-                    alert('Student not found. Please check the roll number.');
-                }
-            });
+        if (studentData[rollNumber]) {
+            const student = studentData[rollNumber];
+            studentName.textContent = student.name;
+            studentSubject.textContent = student.subject;
+            studentMarks.textContent = student.marks;
+            studentRemarks.textContent = student.remarks;
+            resultContainer.style.display = 'block';
+        } else {
+            alert('Student not found. Please check the roll number.');
+        }
     });
 });
