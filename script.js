@@ -1,34 +1,45 @@
+const studentData = {
+    "101": {
+        "name": "John Doe",
+        "subject": "Math",
+        "marks": 95,
+        "remarks": "Excellent"
+    },
+    "102": {
+        "name": "Jane Smith",
+        "subject": "Science",
+        "marks": 88,
+        "remarks": "Very Good"
+    },
+    "103": {
+        "name": "Alice Johnson",
+        "subject": "History",
+        "marks": 75,
+        "remarks": "Good"
+    }
+};
+
 document.addEventListener('DOMContentLoaded', function() {
     const searchForm = document.getElementById('search-form');
     const rollNumberInput = document.getElementById('roll-number');
     const searchButton = document.getElementById('search-button');
     const resultContainer = document.getElementById('result-container');
-    const resultContent = document.getElementById('result-content');
+    const studentName = document.getElementById('student-name');
+    const studentSubject = document.getElementById('student-subject');
+    const studentMarks = document.getElementById('student-marks');
+    const studentRemarks = document.getElementById('student-remarks');
 
-    // Load the JSON data
-    fetch('results.json')
-        .then(response => response.json())
-        .then(data => {
-            const results = data.results;
-
-            searchForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const rollNumber = rollNumberInput.value;
-                const studentResult = results.find(result => result.rollNumber === rollNumber);
-
-                if (studentResult) {
-                    resultContent.innerHTML = `
-                        <p><strong>Roll Number:</strong> ${studentResult.rollNumber}</p>
-                        <p><strong>Name:</strong> ${studentResult.name}</p>
-                        <p><strong>Subject:</strong> ${studentResult.subject}</p>
-                        <p><strong>Marks:</strong> ${studentResult.marks}</p>
-                        <p><strong>Remarks:</strong> ${studentResult.remarks}</p>
-                    `;
-                } else {
-                    resultContent.innerHTML = '<p>Student not found.</p>';
-                }
-
-                resultContainer.style.display = 'block';
-            });
-        });
+    searchButton.addEventListener('click', function() {
+        const rollNumber = rollNumberInput.value;
+        if (studentData[rollNumber]) {
+            const student = studentData[rollNumber];
+            studentName.textContent = student.name;
+            studentSubject.textContent = student.subject;
+            studentMarks.textContent = student.marks;
+            studentRemarks.textContent = student.remarks;
+            resultContainer.style.display = 'block';
+        } else {
+            alert('Student not found. Please check the roll number.');
+        }
+    });
 });
