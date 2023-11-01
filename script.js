@@ -18,10 +18,10 @@ const studentData = {
         "remarks": "Very Good"
     },
     "104": {
-        "name": "Clice Bohnson",
-        "subject": "Kistory",
-        "marks": 25,
-        "remarks": "bad"
+        "name": "Jane Smith",
+        "subject": "Science",
+        "marks": 88,
+        "remarks": "Very Good"
     }
 };
 
