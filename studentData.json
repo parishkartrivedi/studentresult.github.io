@@ -1,25 +1,20 @@
 {
-    "results": [
-        {
-            "rollNumber": "101",
-            "name": "John Doe",
-            "subject": "Math",
-            "marks": 95,
-            "remarks": "Excellent"
-        },
-        {
-            "rollNumber": "102",
-            "name": "Jane Smith",
-            "subject": "Science",
-            "marks": 88,
-            "remarks": "Very Good"
-        },
-        {
-            "rollNumber": "103",
-            "name": "Alice Johnson",
-            "subject": "History",
-            "marks": 75,
-            "remarks": "Good"
-        }
-    ]
+    "101": {
+        "name": "John Doe",
+        "subject": "Math",
+        "marks": 95,
+        "remarks": "Excellent"
+    },
+    "102": {
+        "name": "Jane Smith",
+        "subject": "Science",
+        "marks": 88,
+        "remarks": "Very Good"
+    },
+    "103": {
+        "name": "Alice Johnson",
+        "subject": "History",
+        "marks": 75,
+        "remarks": "Good"
+    }
 }
