@@ -12,10 +12,16 @@ const studentData = {
         "remarks": "Very Good"
     },
     "103": {
-        "name": "Alice Johnson",
-        "subject": "History",
-        "marks": 75,
-        "remarks": "Good"
+        "name": "Jane Smith",
+        "subject": "Science",
+        "marks": 88,
+        "remarks": "Very Good"
+    },
+    "104": {
+        "name": "Clice Bohnson",
+        "subject": "Kistory",
+        "marks": 25,
+        "remarks": "bad"
     }
 };
 
