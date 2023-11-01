@@ -1,17 +1,41 @@
 const studentData = {
-    "101": {
+     "101": {
         "name": "John Doe",
         "subject": "Math",
         "marks": 95,
         "remarks": "Excellent"
     },
     "102": {
-        "name": "Jane Smith",
+        "name": "Jane Sdfmith",
         "subject": "Science",
         "marks": 88,
         "remarks": "Very Good"
     },
-    "103": {
+     "103": {
+        "name": "Jane Shjmith",
+        "subject": "Science",
+        "marks": 89,
+        "remarks": "Very Good"
+    },
+     "104": {
+        "name": "Jane Smfgtith",
+        "subject": "Science",
+        "marks": 90,
+        "remarks": "Very Good"
+    },
+     "105": {
+        "name": "Jane Smthith",
+        "subject": "Science",
+        "marks": 91,
+        "remarks": "Very Good"
+    },
+     "106": {
+        "name": "Jane Smtfeith",
+        "subject": "Science",
+        "marks": 92,
+        "remarks": "Very Good"
+    },
+    "107": {
         "name": "Alice Johnson",
         "subject": "History",
         "marks": 75,
