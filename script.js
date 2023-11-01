@@ -16,6 +16,12 @@ const studentData = {
         "subject": "History",
         "marks": 75,
         "remarks": "Good"
+    },
+    "104": {
+        "name": "ram",
+        "subject": "java",
+        "marks": 72,
+        "remarks": "better"
     }
 };
 
